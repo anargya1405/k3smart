@@ -1,0 +1,1 @@
+document.querySelectorAll('[data-auth-password]').forEach(button=>button.addEventListener('click',()=>{const input=document.getElementById(button.dataset.authPassword);const show=input.type==='password';input.type=show?'text':'password';button.setAttribute('aria-pressed',String(show));button.setAttribute('aria-label',(show?'Sembunyikan':'Tampilkan')+' kata sandi');}));

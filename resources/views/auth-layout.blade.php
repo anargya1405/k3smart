@@ -1,0 +1,9 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#142e24"><title>@yield('title') · SMART K3</title><link rel="stylesheet" href="/app.css?v=13"><link rel="stylesheet" href="/auth.css?v=12">@include('shared-experience')</head><body class="auth-page">
+<a class="skip-link" href="#auth-content">Lewati ke formulir</a>
+<div class="auth-shell"><aside class="auth-story">
+<img class="auth-photo" src="/images/landing/hero-illustration.svg?v=3" alt="Ilustrasi petugas K3 dengan alat pelindung diri meninjau data inspeksi">
+<a class="auth-brand" href="/"><x-logo size="46"/><span>SMART K3<small>SAFETY STARTS WITH US</small></span></a>
+<div class="auth-story-copy"><span class="auth-kicker">BERSAMA, LEBIH SIAP.</span><h1>Ruang kerja aman.<br><em>Dimulai dari kita.</em></h1><p>Satu ruang untuk memantau kesiapan, mencatat temuan, dan menjaga setiap orang.</p><div class="auth-story-tags"><span><x-icon name="check" size="14"/> Terpantau</span><span><x-icon name="check" size="14"/> Terkoordinasi</span></div></div>
+<div class="auth-story-foot"><span>01 — KESELAMATAN DALAM SETIAP LANGKAH</span><span>SMART K3 © {{ date('Y') }}</span></div>
+</aside><main class="auth-main" id="auth-content"><nav class="auth-top"><a href="/"><x-icon name="back" size="16"/> Halaman utama</a><span>SMART WORKSPACE</span></nav><div class="auth-content">@yield('content')</div><footer class="auth-foot"><x-icon name="shield" size="15"/> Akses sesuai peran. Keselamatan untuk semua.</footer></main></div>
+<script src="/auth.js?v=1" defer></script></body></html>

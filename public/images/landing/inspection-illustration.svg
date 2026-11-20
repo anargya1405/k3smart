@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+<title>Ilustrasi inspektor K3 memeriksa alat pemadam api ringan di koridor</title>
+<defs>
+ <linearGradient id="w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8aa9a9"/><stop offset="1" stop-color="#799898"/></linearGradient>
+ <linearGradient id="f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a7b7b"/><stop offset="1" stop-color="#3c5b5b"/></linearGradient>
+ <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffbe0" stop-opacity=".45"/><stop offset="1" stop-color="#fffbe0" stop-opacity="0"/></linearGradient>
+ <radialGradient id="exit"><stop offset="0" stop-color="#7dffff" stop-opacity=".6"/><stop offset="1" stop-color="#7dffff" stop-opacity="0"/></radialGradient>
+ <radialGradient id="tab"><stop offset="0" stop-color="#ffc83d" stop-opacity=".6"/><stop offset="1" stop-color="#ffc83d" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+ .breathe{animation:breathe 4.8s ease-in-out infinite;transform-box:fill-box;transform-origin:50% 100%}
+ .needle{animation:needle 3.2s ease-in-out infinite;transform-box:view-box;transform-origin:574px 404px}
+ .exitglow{animation:pulse 2.6s ease-in-out infinite}
+ .lamp{animation:pulse 5s ease-in-out infinite}
+ .check{stroke-dasharray:40;stroke-dashoffset:40;animation:check 4s ease-in-out infinite}
+ .pop{animation:pop 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+ .scan{animation:scan 2.4s ease-in-out infinite}
+ @keyframes breathe{50%{transform:translateY(-4px)}}
+ @keyframes needle{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+ @keyframes pulse{50%{opacity:.55}}
+ @keyframes check{0%,25%{stroke-dashoffset:40}45%,85%{stroke-dashoffset:0}100%{stroke-dashoffset:40}}
+ @keyframes pop{0%,25%{transform:scale(.6);opacity:0}40%,85%{transform:scale(1);opacity:1}100%{transform:scale(.6);opacity:0}}
+ @keyframes scan{50%{transform:translateY(26px)}}
+ @media (prefers-reduced-motion:reduce){*{animation:none!important}.check{stroke-dashoffset:0}.pop{opacity:1}}
+</style>
+
+<!-- ceiling -->
+<rect width="1600" height="900" fill="url(#w)"/>
+<path d="M0 0h1600v120H0z" fill="#6c8b8b"/>
+<path d="M0 120h1600" stroke="#5b7979" stroke-width="6"/>
+<g class="lamp">
+ <rect x="250" y="104" width="220" height="14" rx="7" fill="#fffbe6"/>
+ <rect x="900" y="104" width="220" height="14" rx="7" fill="#fffbe6"/>
+ <path d="M250 118h220l90 560H160z" fill="url(#beam)" opacity=".6"/>
+ <path d="M900 118h220l90 560H810z" fill="url(#beam)" opacity=".5"/>
+</g>
+
+<!-- wall panels -->
+<g stroke="#83a2a2" stroke-width="4"><path d="M160 120v560M760 120v560M1360 120v560"/></g>
+<rect x="0" y="560" width="1600" height="120" fill="#708f8f"/>
+<path d="M0 560h1600" stroke="#678585" stroke-width="5"/>
+
+<!-- corridor opening on the right -->
+<g>
+ <path d="M1000 160h420v520h-420z" fill="#5c7b7b"/>
+ <path d="M1000 160l110 90h200l110-90z" fill="#4e6c6c"/>
+ <path d="M1000 680l110-90h200l110 90z" fill="#3d5b5b"/>
+ <path d="M1110 250h200v340h-200z" fill="#6a8a8a"/>
+ <rect x="1170" y="400" width="80" height="190" rx="4" fill="#4b6b6b"/>
+ <circle cx="1238" cy="500" r="5" fill="#ffc83d"/>
+ <circle class="exitglow" cx="1210" cy="290" r="70" fill="url(#exit)"/>
+ <rect x="1168" y="272" width="84" height="38" rx="5" fill="#1c9e9e"/>
+ <path d="M1182 300l10-18 10 6 6-10M1196 300l-4-8" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M1216 291h24m-8-8 8 8-8 8" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+
+
+<!-- floor -->
+<path d="M0 680h1600v220H0z" fill="url(#f)"/>
+<path d="M0 680h1600" stroke="#325050" stroke-width="5"/>
+<g stroke="#ecc94b" stroke-width="8" stroke-linecap="round"><path d="M0 760h1600"/></g>
+<path d="M440 690h300v50H440z" fill="#d9483b" opacity=".25"/>
+<g stroke="#d9483b" stroke-width="6" opacity=".7" stroke-dasharray="20 14"><path d="M440 690h300v50H440z" fill="none"/></g>
+
+<!-- APAR (fire extinguisher) on wall -->
+<g>
+ <rect x="520" y="300" width="110" height="20" rx="4" fill="#485f5f"/>
+ <rect x="530" y="370" width="88" height="250" rx="40" fill="#d9483b"/>
+ <rect x="530" y="370" width="30" height="250" rx="15" fill="#e8655a" opacity=".6"/>
+ <rect x="548" y="335" width="52" height="44" rx="8" fill="#2d2d2d"/>
+ <path d="M600 345q60 0 66 70v150" stroke="#2d2d2d" stroke-width="12" fill="none" stroke-linecap="round"/>
+ <rect x="556" y="450" width="54" height="80" rx="6" fill="#f3efe1"/>
+ <path d="M566 470h34M566 486h34M566 502h24" stroke="#c4bca2" stroke-width="5" stroke-linecap="round"/>
+ <circle cx="574" cy="404" r="22" fill="#f6f3e8" stroke="#2d2d2d" stroke-width="5"/>
+ <path d="M558 404a16 16 0 0 1 32 0" stroke="#2c9e9e" stroke-width="5" fill="none"/>
+ <path class="needle" d="M574 404l0-15" stroke="#1b1b1b" stroke-width="4" stroke-linecap="round"/>
+ <path d="M590 338l18-12" stroke="#ecc94b" stroke-width="6" stroke-linecap="round"/>
+ <rect x="500" y="640" width="150" height="34" rx="4" fill="#d9483b"/>
+ <text x="575" y="664" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">APAR</text>
+</g>
+
+<!-- inspection check bubble -->
+<g class="pop">
+ <circle cx="700" cy="300" r="40" fill="#2c9e9e"/>
+ <path class="check" d="M682 300l12 12 24-26" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+
+<!-- inspector -->
+<ellipse cx="370" cy="848" rx="120" ry="16" fill="#254141" opacity=".5"/>
+<g class="breathe">
+ <rect x="330" y="640" width="34" height="190" rx="16" fill="#1c3a3a"/>
+ <rect x="370" y="640" width="34" height="190" rx="16" fill="#173333"/>
+ <rect x="322" y="812" width="50" height="34" rx="12" fill="#3b2b1d"/>
+ <rect x="366" y="812" width="50" height="34" rx="12" fill="#33251a"/>
+ <path d="M300 470q0-34 34-38h62q34 4 34 38v188q0 13-13 13h-104q-13 0-13-13z" fill="#2b6161"/>
+ <path d="M306 480q0-28 28-32h24l12 66 12-66h24q28 4 28 32v174q0 10-10 10h-108q-10 0-10-10z" fill="#ffc83d"/>
+ <rect x="306" y="590" width="128" height="13" fill="#f3e3b7"/><rect x="306" y="620" width="128" height="13" fill="#f3e3b7"/>
+ <rect x="390" y="506" width="26" height="30" rx="4" fill="#e2bb50"/>
+ <rect x="356" y="412" width="28" height="30" rx="8" fill="#a8704a"/>
+ <circle cx="372" cy="384" r="48" fill="#bf8158"/>
+ <circle cx="326" cy="390" r="10" fill="#ad7350"/>
+ <path d="M324 374q6-30 48-34 36 0 48 26z" fill="#1f1a17"/>
+ <path d="M318 378q2-64 54-66 54 2 56 66z" fill="#f7f5ec"/>
+ <rect x="366" y="314" width="11" height="62" rx="5" fill="#e4e1d2"/>
+ <rect x="308" y="372" width="134" height="13" rx="6.5" fill="#e6e3d5"/>
+ <rect x="368" y="390" width="22" height="16" rx="6" fill="#dff3ff" opacity=".35" stroke="#eaf7ff" stroke-width="2.5"/>
+ <rect x="392" y="390" width="20" height="16" rx="6" fill="#dff3ff" opacity=".35" stroke="#eaf7ff" stroke-width="2.5"/>
+ <circle cx="379" cy="398" r="4.5" fill="#1b2a2a"/><circle cx="402" cy="398" r="4.5" fill="#1b2a2a"/>
+ <path d="M381 420q10 7 20 0" stroke="#5a2f1e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+ <!-- arm reaching gauge -->
+ <path d="M424 482l64-30 54-44" stroke="#2b6161" stroke-width="30" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+ <!-- arm holding tablet -->
+ <path d="M310 486l-12 92 50 10" stroke="#265b5b" stroke-width="30" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<circle cx="546" cy="404" r="15" fill="#bf8158"/>
+<circle cx="380" cy="560" r="80" fill="url(#tab)"/>
+<g transform="rotate(-14 384 566)">
+ <rect x="336" y="532" width="100" height="70" rx="9" fill="#142929"/>
+ <rect x="343" y="539" width="86" height="56" rx="5" fill="#fbd97c"/>
+ <rect x="351" y="547" width="40" height="6" rx="3" fill="#5da5a5"/>
+ <g class="scan"><rect x="351" y="560" width="70" height="4" rx="2" fill="#2c9e9e"/></g>
+ <circle cx="412" cy="580" r="7" fill="#2c9e9e"/>
+</g>
+<circle cx="358" cy="590" r="15" fill="#b57a52"/>
+</svg>

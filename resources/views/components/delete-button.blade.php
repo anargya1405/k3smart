@@ -1,0 +1,2 @@
+@props(['action','message'=>'Data ini akan dihapus permanen.','label'=>'Hapus','compact'=>false,'title'=>'Hapus data?'])
+<form method="post" action="{{ $action }}" class="delete-form" data-confirm="{{ $message }}" data-confirm-title="{{ $title }}">@csrf @method('DELETE')<button type="submit" class="danger{{ $compact?' icon-only':'' }}" @if($compact)aria-label="{{ $label }}" title="{{ $label }}"@endif><x-icon name="trash" size="16"/>@unless($compact) {{ $label }}@endunless</button></form>

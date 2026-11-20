@@ -1,0 +1,7 @@
+@php
+$calendarMonth=request('month',date('Y-m'));try{$start=\Carbon\Carbon::createFromFormat('!Y-m',$calendarMonth);}catch(\Throwable $e){$start=now()->startOfMonth();}
+$agenda=\App\Models\Entry::where('module','schedule')->whereBetween('date',[$start->toDateString(),$start->copy()->endOfMonth()->toDateString()])->get();
+@endphp
+<section class="panel"><div class="panel-head"><div><h2>Kalender kegiatan</h2><p>{{ $start->translatedFormat('F Y') }}</p></div><form><input aria-label="Bulan kalender" type="month" name="month" value="{{ $start->format('Y-m') }}" onchange="this.form.submit()"></form></div><div class="table-wrap"><div class="calendar">@foreach(['Sen','Sel','Rab','Kam','Jum','Sab','Min'] as $day)<div class="calendar-day">{{ $day }}</div>@endforeach
+@for($i=1;$i<$start->dayOfWeekIso;$i++)<div class="calendar-cell muted"></div>@endfor
+@for($day=1;$day<=$start->daysInMonth;$day++)@php($date=$start->copy()->day($day)->toDateString())<div class="calendar-cell {{ $date===date('Y-m-d')?'today':'' }}"><b>{{ $day }}</b>@foreach($agenda->where('date',$date) as $event)<a href="/entry/{{ $event->id }}" class="calendar-event">{{ $event->title }}<small>{{ $event->area }}</small></a>@endforeach</div>@endfor</div></div></section>
